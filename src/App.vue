@@ -1,4 +1,7 @@
 <template>
+<div id="logo">
+  <img ref="/src/assets/logo.png">
+</div>
   <div id="app">
     <div class="Login-container">
       <h1>Entrar</h1>
