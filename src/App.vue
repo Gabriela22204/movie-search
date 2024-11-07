@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <div class="search-container">
-      <h1>Movie Search</h1>
-      <input v-model="searchQuery" type="text" placeholder="Search for a movie..." @input="searchMovie"/>
+    <div class="Login-container">
+      <h1>Entrar</h1>
+      <input v-model="userLogin" type="text" placeholder="Email ou número de celular" @input="userLogin"/>
+      <input v-model="Password" type="password" placeholder="Senha" @input="Password"/>
 
+      <button></button>
     </div>
   </div>
 </template>
