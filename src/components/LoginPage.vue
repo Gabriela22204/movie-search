@@ -61,13 +61,13 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #141414;
+  background-color: #413d3d;
 }
 
 .login-box {
   width: 350px;
   padding: 40px;
-  background-color: #333;
+  background-color: #1b1b1b;
   border-radius: 10px;
   text-align: center;
   color: white;
@@ -101,19 +101,23 @@ export default {
 }
 
 .login-button:hover {
-  background-color: #f40612;
+  background-color: #c60b14;
 }
 
 .code-access-button {
     width: 100%;
     padding: 14px;
-    background-color: #555;
+    background-color: #363434;
     color: white;
     border: none;
     font-size: 18px;
     cursor: pointer;
     border-radius: 4px;
     
+}
+
+.code-access-button:hover {
+  background-color: #272626;
 }
 
 .error-message {
