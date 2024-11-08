@@ -18,17 +18,23 @@
                 class="login-input" 
             />
             <button @click="handleLogin" class="login-button">Entrar</button>
-            <p class="login-text">OU</p>
+            <div class="login-text-container">
+                <p class="login-text">OU</p>
+            </div>
+            
 
             <button @click="handleLogin" class="code-access-button">Usar um código de acesso</button>
             
-            <div class="forgot-password">
+            <div class="forgot-password-container">
                 <a class="forgot-password-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
             </div>
 
-            <div>
+            <div class="remember-container">
+                
                 <input type="checkbox" id="checkbox" v-model="checked" />
-                <label for="checkbox">{{ checked }}</label>
+                <label class="container-checkbox" for="checkbox">{{ checked }}</label>
+                <span class="checkmark"></span>
+                
                 <p class="checkbox-text">Lembre-se de mim</p>
             </div>
 
@@ -120,7 +126,7 @@ export default {
   background-color: #c60b14;
 }
 
-.forgot-password {
+.forgot-password-container {
     width: 100%;
     padding: 14px;
     text-align: center;
@@ -148,6 +154,7 @@ export default {
 
 #checkbox:hover {
     cursor: pointer;
+    border-color:white;
 }
 
 .code-access-button {
