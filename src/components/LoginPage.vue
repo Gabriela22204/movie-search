@@ -38,7 +38,7 @@
                 <p class="checkbox-text">Lembre-se de mim</p>
             </div>
 
-            <div class="sub">
+            <div class="sub-container">
                 <p class="sub-text">Novo por aqui?</p>
                 <a class="sub-link" href="https:www.netflix.com">Assine agora</a>
             </div>
@@ -177,5 +177,22 @@ export default {
   color: red;
   margin-top: 15px;
   font-size: 14px;
+}
+
+.remember-container {
+    display: flex;
+    width: 100%;
+    padding: 0 14 14 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sub-container {
+    display: flex;
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0 10px;
+    align-items: center;
+    justify-content: space-between;
 }
 </style>
