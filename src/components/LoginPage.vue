@@ -21,6 +21,22 @@
             <p class="login-text">OU</p>
 
             <button @click="handleLogin" class="code-access-button">Usar um código de acesso</button>
+            
+            <div class="forgot-password">
+                <a class="forgot-password-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
+            </div>
+
+            <div>
+                <input type="checkbox" id="checkbox" v-model="checked" />
+                <label for="checkbox">{{ checked }}</label>
+                <p class="checkbox-text">Lembre-se de mim</p>
+            </div>
+
+            <div class="sub">
+                <p class="sub-text">Novo por aqui?</p>
+                <a class="sub-link" href="https:www.netflix.com">Assine agora</a>
+            </div>
+            
 
             <p v-if="error" class="error-message">{{ error }}</p>
         </div>
@@ -102,6 +118,36 @@ export default {
 
 .login-button:hover {
   background-color: #c60b14;
+}
+
+.forgot-password {
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    margin: 10px -10px 10px;
+    
+}
+
+.forgot-password-link, .checkbox-text, .sub-text, .sub-link {
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.forgot-password-link:hover , .sub-link:hover {
+    text-decoration: underline;
+}
+
+#checkbox {
+    padding: 14px;
+    width: 100%;
+    border-color:#1b1b1b;
+    border: 2px;
+    
+}
+
+#checkbox:hover {
+    cursor: pointer;
 }
 
 .code-access-button {
