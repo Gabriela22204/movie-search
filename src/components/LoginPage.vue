@@ -83,13 +83,15 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #413d3d;
+  background-color: #151414;
+  
 }
 
 .login-box {
   width: 350px;
   padding: 40px;
-  background-color: #1b1b1b;
+  background-color: #000000;
+  opacity: 0.8;
   border-radius: 10px;
   text-align: center;
   color: white;
