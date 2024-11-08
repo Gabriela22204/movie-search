@@ -97,7 +97,9 @@ export default {
 
 .login-title {
   font-size: 28px;
+  margin-left: 3px;
   margin-bottom: 20px;
+  display: flex;
 }
 
 .login-input {
