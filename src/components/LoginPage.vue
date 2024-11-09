@@ -49,23 +49,20 @@
                 </div>
 
                 <!-- button Entrar-->
-                <button @click="handleLogin" class="login-button" type="submit">Entrar</button>
+                <button role="button" @click="handleLogin" class="login-submit-button" type="submit">Entrar</button>
+                <!-- p1 element -->
+                <p class="p1">OU</p>
+                <!-- button Usar código de acesso -->
+                <button role="button" @click="handleLogin" class="login-toggle-button" type="button">Usar um código de acesso</button>
+                <!-- <a> element 'Esqueceu a senha?' -->
+                <a role="link" class="login-help-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
             </form>
         </div>
     </div>
 <!-- rascunho -->          
             
+                
             
-            <div class="login-text-container">
-                <p class="login-text">OU</p>
-            </div>
-            
-
-            <button @click="handleLogin" class="code-access-button">Usar um código de acesso</button>
-            
-            <div class="forgot-password-container">
-                <a class="forgot-password-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
-            </div>
 
             <div class="remember-container">
                 
@@ -168,7 +165,7 @@ export default {
   font-size: 16px;
 }
 
-.login-button {
+.login-submit-button {
   width: 100%;
   padding: 14px;
   background-color: #e50914;
@@ -191,13 +188,13 @@ export default {
     
 }
 
-.forgot-password-link, .checkbox-text, .sub-text, .sub-link {
+.login-help-link, .checkbox-text, .sub-text, .sub-link {
     color:white;
     text-decoration: none;
     font-size: 18px;
 }
 
-.forgot-password-link:hover , .sub-link:hover {
+.login-help-link:hover , .sub-link:hover {
     text-decoration: underline;
     color:rgb(163, 156, 156);
 }
@@ -215,7 +212,7 @@ export default {
     border-color:white;
 }
 
-.code-access-button {
+.login-toggle-button {
     width: 100%;
     padding: 14px;
     background-color: #363434;
@@ -227,7 +224,7 @@ export default {
     
 }
 
-.code-access-button:hover {
+.login-toggle-button:hover {
   background-color: #272626;
 }
 
