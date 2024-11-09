@@ -1,24 +1,60 @@
 <template>
-    <div id="login-page-container">
-        <form class="login-layout">
-        <div class="login-container">
-        <div class="login-box">
-            <h1 class="login-title">Entrar</h1>
-            <input
-                type="email"
-                v-model="email"
-                placeholder="Email ou número de telefone"
-                @input="resetError"
-                class="login-input"
-            />
+    <div class="default">
+        <div class="login-page-container">
+            <!-- titulo -->
+            <header class="header-title">
+                <h1 class="default-login-title">Entrar</h1>
+            </header>
+            <!-- formulario -->
+            <form class="form-Entrar">
+                <!-- input 1 -->
+                <div class="elemento1">
+                    <div class="login-container1">
+                        <!-- put label inside of input field -->
+                        <label for="email" class="lbl-email">
+                            Email ou número de celular
+                        </label>
+                        <!-- input field -->
+                        <div class="input-container">
+                            <input
+                                type="email"
+                                value="email"
+                                v-model="email"
+                                placeholder="Email ou número de telefone"
+                                @input="resetError"
+                                class="login-input"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!-- input 2 -->
+                <div class="elemento2">
+                    <div class="login-container2">
+                        <!-- put label inside of input field -->
+                        <label for="password" class="lbl-password">
+                            Senha
+                        </label>
+                        <!-- input field -->
+                        <div class="input-container">
+                            <input 
+                                type="password"
+                                value="password" 
+                                v-model="password" 
+                                placeholder="Senha" 
+                                @input="resetError"
+                                class="login-input" 
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- button -->
+
+            </form>
+        </div>
+    </div>
+<!-- rascunho -->          
             
-            <input 
-                type="password" 
-                v-model="password" 
-                placeholder="Senha" 
-                @input="resetError"
-                class="login-input" 
-            />
             <button @click="handleLogin" class="login-button">Entrar</button>
             <div class="login-text-container">
                 <p class="login-text">OU</p>
@@ -55,10 +91,7 @@
             </div>
 
             <p v-if="error" class="error-message">{{ error }}</p>
-        </div>
-    </div>
-    </form>
-    </div>
+        
     
     
 </template>
