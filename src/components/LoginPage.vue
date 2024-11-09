@@ -106,12 +106,75 @@
             </footer>
         </div>
     </div>
-<!-- rascunho -->
+<!-- footer login page -->
+    <footer class="default-footer">
+        <footer class="default-footer2">
+            <div data-layout="wrapper" class="default-wrapper">
+                <div data-layout="container">
+                    <!-- item 1 -->
+                     <div data-layout="item" class="item1">
+                        <div class="">
+                            "Dúvidas? Ligue "
+                            <a href="tel:0800 591 2876">0800 591 2876</a>
+                        </div>
+                     </div>
+                     <!-- item 2 -->
+                      <div data-layout="item" class="item2">
+                        <div class="item2-sub">
+                            <div data-layout="wrapper" class="item2-containerwrapper">
+                                <ul data-layout="container" class="default-container-item2">
+                                    <!-- perguntas-frequentes -->
+                                    <li data-layout="item" class="li-sub-item">
+                                        <a role="link" data-uia="footer-link" target="_self" class="perguntas-frequentes" href="https:/help.netflix.com/support/412">
+                                            Perguntas frequentes
+                                        </a>
+                                    </li>
+                                    <!-- central de ajuda -->
+                                    <li data-layout="item" class="li-sub-item-2">
+                                        <a role="link" data-uia="footer-link" target="_self" class="central-ajuda" href="https:/help.netflix.com">
+                                            Central de Ajuda
+                                        </a>
+                                    </li>
+                                    <!-- termos de uso -->
+                                    <li data-layout="item" class="li-sub-item-3">
+                                        <a role="link" data-uia="footer-link" target="_self" class="termos-de-uso" href="https:/help.netflix.com/legal/termsofuse">
+                                            Termos de Uso
+                                        </a>
+                                    </li>
+                                    <!-- privacidade -->
+                                    <li data-layout="item" class="li-sub-item-4">
+                                        <a role="link" data-uia="footer-link" target="_self" class="privacidade" href="https:/help.netflix.com/legal/privacy">
+                                            Privacidade
+                                        </a>
+                                    </li>
+
+                                    <!-- preferencia de cookies -->
+                                    <li data-layout="item" class="li-sub-item-5">
+                                        <a role="link" data-uia="footer-link" target="_self" class="preferencia-cookies" href="#">
+                                            Preferências de cookies
+                                        </a>
+                                    </li>
+                                    <!-- informações corporativas -->
+                                    <li data-layout="item" class="li-sub-item-6">
+                                        <a role="link" data-uia="footer-link" target="_self" class="info-corporativas" href="https:/help.netflix.com/legal/corpinfo">
+                                           Informações corporativas
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </footer>
+    </footer>
+<!-- rascunho 
 
             <p v-if="error" class="error-message">{{ error }}</p>
         
-    
-    
+-->
 </template>
 
 <script>
