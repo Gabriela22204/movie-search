@@ -79,18 +79,27 @@
                     <a class target="_self" href="/">Assine agora</a>
                     "."
                 </p>
-                
+                <!-- reCAPTCHA element -->
+                 <div class="recaptcha-terms-of-use">
+                    <p>
+                        <span>
+                            "Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô."
+                        </span>
+                        "&nbsp;"
+                        <!-- button see more -->
+                         <button class="recaptcha-terms-of-use-link-button">
+                            Saiba mais.
+                         </button>
+                    </p>
+                    <div>
+
+                    </div>
+                 </div>
             </footer>
         </div>
     </div>
 <!-- rascunho -->
                 
-                <a class="sub-link" href="https:www.netflix.com"></a>
-            
-            <div>
-                <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.</p>
-                <a href=" ">Saiba mais</a>
-            </div>
             <div>
                 <p>As informações recolhidas pelo Google reCAPTCHA estão sujeitas à <a href="https://policies.google.com/privacy">Política de Privacidade</a> e <a href="https://policies.google.com/terms">Termos de Uso</a>, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).</p>
 
