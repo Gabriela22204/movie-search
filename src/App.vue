@@ -1,21 +1,18 @@
 
 
 <template>
-  <div>
-      <img ref="/src/assets/bg.png">
-  </div>
-  <div>
+  <div class="data" lang="pt-BR" dir="ltr">
+    <Header>
     <HeaderPage />
-    <main>
-      <slot></slot>
-    </main>
-  </div>
+  </Header>
   
-  <div id="app">
-    <div class="Login-container">
-    </div>
+  <div id="LoginPage-container">
     <LoginPage />
   </div>
+  </div>
+  
+
+
 </template>
 
 <script>
