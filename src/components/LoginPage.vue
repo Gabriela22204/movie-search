@@ -1,7 +1,7 @@
 <template>
     <div class="default">
         <div class="login-page-container">
-            <!-- titulo -->
+            <!-- header -->
             <header class="header-title">
                 <h1 class="default-login-title">Entrar</h1>
             </header>
@@ -57,26 +57,35 @@
                 <!-- <a> element 'Esqueceu a senha?' -->
                 <a role="link" class="login-help-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
             </form>
+            <!-- footer -->
+            <footer class="default-footer">
+                <div class="a">
+                    <div class="remember-me-field-container">
+                        <div class="control-wrapper">
+                            <!-- checkbox remember me -->
+                            <input type="checkbox" id="checkbox" name="rememberMe" v-model="checked">
+                        </div>
+
+                        <!-- label remember me -->
+                         <label for="checkbox" class="default-label">
+                            {{ checked }}
+                         </label>
+                    </div>
+                </div>
+
+                <!-- login sign up now -->
+                <p class="login-sign-up-now">
+                    "Novo por aqui?"
+                    <a class target="_self" href="/">Assine agora</a>
+                    "."
+                </p>
+                
+            </footer>
         </div>
     </div>
-<!-- rascunho -->          
-            
+<!-- rascunho -->
                 
-            
-
-            <div class="remember-container">
-                
-                <input type="checkbox" id="checkbox" v-model="checked" />
-                <label class="container-checkbox" for="checkbox">{{ checked }}</label>
-                <span class="checkmark"></span>
-                
-                <p class="checkbox-text">Lembre-se de mim</p>
-            </div>
-
-            <div class="sub-container">
-                <p class="sub-text">Novo por aqui?</p>
-                <a class="sub-link" href="https:www.netflix.com">Assine agora</a>
-            </div>
+                <a class="sub-link" href="https:www.netflix.com"></a>
             
             <div>
                 <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.</p>
@@ -188,13 +197,13 @@ export default {
     
 }
 
-.login-help-link, .checkbox-text, .sub-text, .sub-link {
+.login-help-link, .default-label, .login-sign-up-now, ._self {
     color:white;
     text-decoration: none;
     font-size: 18px;
 }
 
-.login-help-link:hover , .sub-link:hover {
+.login-help-link:hover , ._self:hover {
     text-decoration: underline;
     color:rgb(163, 156, 156);
 }
@@ -234,7 +243,7 @@ export default {
   font-size: 14px;
 }
 
-.remember-container {
+.remember-me-field-container {
     display: flex;
     width: 100%;
     padding: 0 14 14 0;
