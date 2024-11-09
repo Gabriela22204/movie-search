@@ -166,6 +166,8 @@
                             </div>
                         </div>
                       </div>
+                      <!-- idioma toggle -->
+                       
                 </div>
             </div>
         </footer>
