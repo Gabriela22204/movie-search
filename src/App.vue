@@ -4,11 +4,8 @@
   <div>
       <img ref="/src/assets/bg.png">
   </div>
-  <div>
+  <div class="Header-container">
     <HeaderPage />
-    <main>
-      <slot></slot>
-    </main>
   </div>
   
   <div id="app">
