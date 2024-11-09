@@ -48,14 +48,14 @@
                     </div>
                 </div>
 
-                <!-- button -->
-
+                <!-- button Entrar-->
+                <button @click="handleLogin" class="login-button" type="submit">Entrar</button>
             </form>
         </div>
     </div>
 <!-- rascunho -->          
             
-            <button @click="handleLogin" class="login-button">Entrar</button>
+            
             <div class="login-text-container">
                 <p class="login-text">OU</p>
             </div>
