@@ -91,19 +91,22 @@
                             Saiba mais.
                          </button>
                     </p>
-                    <div>
 
+                    <!-- recaptcha terms of use text -->
+                    <div class="recaptcha-terms-of-use--disclousure">
+                        <span id="recaptcha-disclousure-text">
+                            "As informações recolhidas pelo Google reCAPTCHA estão sujeitas à "
+                            <a href="https://policies.google.com/privacy" id="recaptcha-privacy-link" target="_blank">Política de Privacidade</a>
+                            " e "
+                            <a href="https://policies.google.com/terms" id="recaptcha-tos-link">Termos de Uso</a>
+                            ", e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google)."
+                        </span>
                     </div>
                  </div>
             </footer>
         </div>
     </div>
 <!-- rascunho -->
-                
-            <div>
-                <p>As informações recolhidas pelo Google reCAPTCHA estão sujeitas à <a href="https://policies.google.com/privacy">Política de Privacidade</a> e <a href="https://policies.google.com/terms">Termos de Uso</a>, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).</p>
-
-            </div>
 
             <p v-if="error" class="error-message">{{ error }}</p>
         
