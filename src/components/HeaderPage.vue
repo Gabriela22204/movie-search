@@ -4,7 +4,7 @@
         <div data-layout="item" class="header-item">
           <a role="link" class="" href="/">
             <img src="/icons/logo.png"  class="header-logo" alt="Netflix Logo">
-            <h1>Netflix</h1>
+           
           </a>
         </div>
 
@@ -20,11 +20,10 @@ export default {
 
 
 <style scoped>
-.header {
+.header-container {
   display: flex;
   align-items: left;
-  padding: 10px;
-  background-color: black;
+  background-color: transparent;
 }
 
 .logo {
