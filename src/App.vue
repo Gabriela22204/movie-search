@@ -4,8 +4,11 @@
   <div>
       <img ref="/src/assets/bg.png">
   </div>
-  <div class="Header-container">
+  <div>
     <HeaderPage />
+    <main>
+      <slot></slot>
+    </main>
   </div>
   
   <div id="app">
@@ -23,7 +26,7 @@ import LoginPage from './components/LoginPage.vue';
 import HeaderPage from './components/HeaderPage.vue';
 
 export default {
-  name: 'App', 
+  name: 'App',
   components: {
     LoginPage, HeaderPage,
   },
