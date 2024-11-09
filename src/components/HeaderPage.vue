@@ -12,12 +12,19 @@
     </header>
 </template>
 
+<script>
+export default {
+    name:'HeaderPage',
+};
+</script>
+
+
 <style scoped>
 .header {
   display: flex;
-  align-items: center;
+  align-items: left;
   padding: 10px;
-  background-color: #f8f9fa;
+  background-color: transparent;
 }
 
 .logo {
