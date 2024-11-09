@@ -1,5 +1,6 @@
 <template>
-    <div class="login-container">
+    <form class="login-layout">
+        <div class="login-container">
         <div class="login-box">
             <h1 class="login-title">Entrar</h1>
             <input
@@ -55,6 +56,8 @@
             <p v-if="error" class="error-message">{{ error }}</p>
         </div>
     </div>
+    </form>
+    
 </template>
 
 <script>

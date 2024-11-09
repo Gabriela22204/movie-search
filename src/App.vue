@@ -5,10 +5,12 @@
     <Header>
     <HeaderPage />
   </Header>
-  
-  <div id="LoginPage-container">
+  <div>
+    <div id="LoginPage-container">
     <LoginPage />
   </div>
+  </div>
+  
   </div>
   
 
