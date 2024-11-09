@@ -79,6 +79,12 @@ export default {
 
 <style scoped>
 .login-container {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;

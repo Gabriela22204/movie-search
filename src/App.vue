@@ -1,3 +1,5 @@
+
+
 <template><div>
   <img ref="/src/assets/bg.png">
 
