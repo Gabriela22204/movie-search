@@ -13,9 +13,6 @@
   
   <div id="app">
     <div class="Login-container">
-      
-
-      <p>As informações recolhidas pelo Google reCAPTCHA estão sujeitas à <a href="https://policies.google.com/privacy">Política de Privacidade</a> e <a href="https://policies.google.com/terms">Termos de Uso</a>, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).</p>
     </div>
     <LoginPage />
   </div>
