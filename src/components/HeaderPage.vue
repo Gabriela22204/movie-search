@@ -3,7 +3,7 @@
       <div data-layout="wrapper" class="header-container-element">
         <div data-layout="item" class="header-item">
           <a role="link" class="" href="/">
-            <img src="/public/icons/site.logo.png" class="header-logo" alt="Netflix Logo">
+            <img src="/icons/logo.png"  class="header-logo" alt="Netflix Logo">
             <h1>Netflix</h1>
           </a>
         </div>
@@ -24,13 +24,16 @@ export default {
   display: flex;
   align-items: left;
   padding: 10px;
-  background-color: transparent;
+  background-color: black;
 }
 
 .logo {
   width: 100px; 
   height: auto;  
   margin-right: 20px;  /* Space between logo and title */
+}
+.header-logo {
+    width: 100px;
 }
 
 h1 {
