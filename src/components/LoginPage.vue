@@ -1,5 +1,6 @@
 <template>
-    <form class="login-layout">
+    <div id="login-page-container">
+        <form class="login-layout">
         <div class="login-container">
         <div class="login-box">
             <h1 class="login-title">Entrar</h1>
@@ -57,6 +58,8 @@
         </div>
     </div>
     </form>
+    </div>
+    
     
 </template>
 

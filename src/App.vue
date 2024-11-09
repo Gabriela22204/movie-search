@@ -2,14 +2,17 @@
 
 <template>
   <div class="data" lang="pt-BR" dir="ltr">
+    <!-- header -->
     <Header>
-    <HeaderPage />
-  </Header>
-  <div>
-    <div id="LoginPage-container">
-    <LoginPage />
-  </div>
-  </div>
+      <HeaderPage />
+    </Header>
+
+    <!-- content -->
+    <div class="content">
+    
+      <LoginPage />
+    
+    </div>
   
   </div>
   
