@@ -97,7 +97,7 @@ export default {
   width: 350px;
   padding: 40px;
   background-color: #000000;
-  opacity: 0.8;
+  opacity: none;
   border-radius: 10px;
   text-align: center;
   color: white;
