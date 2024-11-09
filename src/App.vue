@@ -35,20 +35,19 @@ export default {
 </script>
 
 <style>
-/* Add background image to the entire page */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensure body takes up the full height of the viewport */
-  background-image: url('/public/icons/bg.png'); /* Path to the image */
-  background-size: cover; /* Cover the entire page */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 100%;
+  background-image: url('/public/icons/bg.png'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 #app {
   text-align: center;
-  color: white; /* Make text white to contrast the background */
-  height: 100%; /* Ensure content also takes full height */
+  color: white; 
+  height: 100%; 
 }
 </style>
