@@ -43,6 +43,10 @@
                 <a class="sub-link" href="https:www.netflix.com">Assine agora</a>
             </div>
             
+            <div>
+                <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.</p>
+                <a href=" ">Saiba mais</a>
+            </div>
 
             <p v-if="error" class="error-message">{{ error }}</p>
         </div>
@@ -89,7 +93,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #151414;
+  
   
 }
 
