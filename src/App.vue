@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="data" lang="pt-BR" dir="ltr">
     <!-- header -->
@@ -15,14 +13,20 @@
     </div>
   
   </div>
-  
-
-
+<!-- teste de componente inlabel com floatlabel -->
+    <!-- <div>
+      <FloatLabel variant="in">
+        <InputText id="in_label" v-model="value1" autocomplete="off" />
+        <label for="in_label">{{ text }}</label>
+      </FloatLabel>
+    </div> -->
+<!-- até aqui -->
 </template>
 
 <script>
 import LoginPage from './components/LoginPage.vue';
 import HeaderPage from './components/HeaderPage.vue';
+
 
 export default {
   name: 'App',
