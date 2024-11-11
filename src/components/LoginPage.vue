@@ -187,11 +187,12 @@ export default {
         return {
             email: '',
             password: '',
+            checked: false,
             error: '',
         };
     },
     methods: {
-        hangleLogin(){
+        handleLogin(){
             if (this.email === 'user@example.com' && this.password === 'password123') {
                 alert('Login bem-sucedido');
                 // redirect to another page
