@@ -8,9 +8,14 @@
             <!-- form -->
             <form class="form-Entrar" @submit.prevent="handleLogin">
                 <!-- input 1 -->
-                <div class="elemento1">
+                <div class="element1">
                     <div class="login-container1">
                         <!-- put label inside of input field -->
+                        <FloatLabel variant="in">
+                            <InputText id="in_label" v-model="value2" variant="filled" />
+                            <label for="in_label">In Label</label>
+                        </FloatLabel>
+                        
                         <label for="email" class="lbl-email">
                             Email ou número de celular
                         </label>
@@ -27,10 +32,12 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- input 2 -->
-                <div class="elemento2">
+
+                <div class="element2">
                     <div class="login-container2">
-                        <!-- put label inside of input field -->
+                       
                         <label for="password" class="lbl-password">
                             Senha
                         </label>

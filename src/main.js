@@ -4,6 +4,7 @@ import App from './App.vue'
 import PrimeVue from 'primevue/config';
 import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
+import FloatLabel from 'primevue/floatlabel';
 import Checkbox from 'primevue/checkbox';
 import Card from 'primevue/card';
 import 'primevue/resources/themes/saga-blue/theme.css'; 
@@ -16,6 +17,7 @@ createApp(App)
 .use(VeeValidate)
 .component('Button', Button)
 .component('InputText', InputText)
+.component('FloatLabel', FloatLabel)
 .component('Checkbox', Checkbox)
 .component('Card', Card)
 .mount('#app')
