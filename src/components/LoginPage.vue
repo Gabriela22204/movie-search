@@ -5,8 +5,8 @@
             <header class="header-title">
                 <h1 class="default-login-title">Entrar</h1>
             </header>
-            <!-- formulario -->
-            <form class="form-Entrar">
+            <!-- form -->
+            <form class="form-Entrar" @submit.prevent="handleLogin">
                 <!-- input 1 -->
                 <div class="elemento1">
                     <div class="login-container1">
