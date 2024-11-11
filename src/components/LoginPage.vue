@@ -16,13 +16,13 @@
                         </label>
                         <!-- input field -->
                         <div class="input-container">
-                            <input
-                                type="email"
-                                value="email"
+                            <InputText
+                                id="email"
                                 v-model="email"
                                 placeholder="Email ou número de telefone"
                                 @input="resetError"
                                 class="login-input"
+                                :class="{'p-invalid': error}"
                             />
                         </div>
                     </div>
