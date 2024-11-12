@@ -11,14 +11,14 @@
                 <div class="element1">
                     <div class="login-container1">
                         <!-- put label inside of input field -->
-                        <!-- <FloatLabel variant="in">
-                            <InputText id="in_label" v-model="value2" variant="filled" />
-                            <label for="in_label">In Label</label>
-                        </FloatLabel> -->
+                        <AppFloatLabel variant="in">
+                            <InputText id="email" v-model="value2" variant="filled" />
+                            <label for="email">Email ou número de celular</label>
+                        </AppFloatLabel>
 
-                        <label for="email" class="lbl-email">
+                        <!-- <label for="email" class="lbl-email">
                             Email ou número de celular
-                        </label>
+                        </label> -->
                         <!-- input field -->
                         <div class="input-container">
                             <InputText
