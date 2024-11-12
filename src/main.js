@@ -14,18 +14,14 @@ import 'primeicons/primeicons.css';
 import VeeValidate from 'vee-validate'; 
 
 const app = createApp(App);
-app.use(PrimeVue, {
-    theme: {
-        preset: Aura
-    }
-});
+app.use(PrimeVue, { theme: Aura})
+app.use(VeeValidate)
 
-createApp(App)
-.use(PrimeVue)
-.use(VeeValidate)
-.component('Button', Button)
-.component('InputText', InputText)
-.component('FloatLabel', FloatLabel)
-.component('Checkbox', Checkbox)
-.component('Card', Card)
-.mount('#app')
+app.component('Button', Button)
+app.component('InputText', InputText)
+app.component('FloatLabel', FloatLabel)
+app.component('Checkbox', Checkbox)
+app.component('Card', Card)
+
+
+app.mount('#app')
