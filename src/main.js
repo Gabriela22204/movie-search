@@ -11,7 +11,9 @@ import Card from 'primevue/card';
 import 'primevue/resources/themes/saga-blue/theme.css'; 
 import 'primevue/resources/primevue.min.css';  // Estilos globais
 import 'primeicons/primeicons.css';  
-import VeeValidate from 'vee-validate'; 
+import VeeValidate from 'vee-validate';
+
+import "./assets/main.css";
 
 const app = createApp(App);
 app.use(PrimeVue, { theme: Aura})
