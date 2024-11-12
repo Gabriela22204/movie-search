@@ -56,6 +56,7 @@
                 </div>
 
                 <!-- button Entrar-->
+                <Button label="Submit" />
                 <button role="button" @click="handleLogin" class="login-submit-button" type="submit">Entrar</button>
                 <!-- p1 element -->
                 <p class="p1">OU</p>
@@ -186,6 +187,12 @@
 -->
 </template>
 
+//components
+<script setup>
+
+import Button from 'primevue/button';
+
+</script>
 <script>
 
 export default {

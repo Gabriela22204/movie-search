@@ -3,11 +3,13 @@ import App from './App.vue'
 
 import PrimeVue from 'primevue/config';
 import Aura from '@primevue/themes/aura';
+//components
 import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
 import FloatLabel from 'primevue/floatlabel';
 import Checkbox from 'primevue/checkbox';
 import Card from 'primevue/card';
+
 import 'primevue/resources/themes/saga-blue/theme.css'; 
 import 'primevue/resources/primevue.min.css';  // Estilos globais
 import 'primeicons/primeicons.css';  
