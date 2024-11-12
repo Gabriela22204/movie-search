@@ -56,12 +56,12 @@
                 </div>
 
                 <!-- button Entrar-->
-                <Button label="Submit" />
-                <button role="button" @click="handleLogin" class="login-submit-button" type="submit">Entrar</button>
+                <Button label="Entrar" @click="handleLogin" class="login-submit-button" type="submit" />
+                <!-- <button role="button" @click="handleLogin" class="login-submit-button" type="submit">Entrar</button> --> 
                 <!-- p1 element -->
                 <p class="p1">OU</p>
                 <!-- button Usar código de acesso -->
-                <button role="button" @click="handleLogin" class="login-toggle-button" type="button">Usar um código de acesso</button>
+                <Button label="Usar um código de acesso" @click="handleLogin" class="login-toggle-button" type="button" />
                 <!-- <a> element 'Esqueceu a senha?' -->
                 <a role="link" class="login-help-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
             </form>
@@ -322,6 +322,7 @@ export default {
     font-size: 18px;
     cursor: pointer;
     border-radius: 4px;
+    align-content: center;
     
 }
 
