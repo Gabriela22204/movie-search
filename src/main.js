@@ -17,11 +17,12 @@ const app = createApp(App);
 app.use(PrimeVue, { theme: Aura})
 app.use(VeeValidate)
 
-app.component('Button', Button)
-app.component('InputText', InputText)
-app.component('FloatLabel', FloatLabel)
-app.component('Checkbox', Checkbox)
-app.component('Card', Card)
+// global name modified
+app.component('AppButton', Button)
+app.component('AppInputText', InputText)
+app.component('AppFloatLabel', FloatLabel)
+app.component('AppCheckbox', Checkbox)
+app.component('AppCard', Card)
 
 
 app.mount('#app')
