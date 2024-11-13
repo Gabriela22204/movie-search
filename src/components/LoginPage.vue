@@ -5,31 +5,40 @@
             <header class="header-title">
                 <h1 class="default-login-title">Entrar</h1>
             </header>
-            <!-- form -->
+            <!-- teste -->
+            <Form v-slot="$form" :initialValues="formInitialValues" :resolver="formResolver" :validateOnValueUpdate="false" :validateOnBlur="true" :validateOnMount="['firstName']" @submit="onFormSubmit" class="flex flex-col gap-4 w-full sm:w-56">
+                <div class="flex flex-col gap-1">
+                    <InputText name="username" type="text" placeholder="Username" fluid />
+                    <Message v-if="$form.username?.invalid" severity="error" size="small" variant="simple">{{ $form.username.error.message }}</Message>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <InputText name="firstName" type="text" placeholder="First Name" fluid :formControl="{ validateOnValueUpdate: true }" />
+                    <Message v-if="$form.firstName?.invalid" severity="error" size="small" variant="simple">{{ $form.firstName.error.message }}</Message>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <InputText name="lastName" type="text" placeholder="Last Name" fluid />
+                    <Message v-if="$form.lastName?.invalid" severity="error" size="small" variant="simple">{{ $form.lastName.error.message }}</Message>
+                </div>
+                <Button type="submit" severity="secondary" label="Submit" />
+</Form>
+            <!-- form --> 
             <form class="form-Entrar" @submit.prevent="handleLogin">
                 <!-- input 1 -->
-                <div class="element1">
-                    <div class="login-container1">
-                        <!-- put label inside of input field -->
-                        <FloatLabel variant="in" class="inline">
-                            <InputText id="email"  v-model="value1" :invalid="!value1"  variant="filled"  /> 
-                            <!-- @input="resetError"   -->
-                            <label class="lblEmail"  for="email" >Email ou número de celular</label>
-                        </FloatLabel>
-
-                        
-                    </div>
-                </div>
+            
 
                 <!-- input 2 -->
 
                 <div class="element2">
                     <div class="login-container2">
-                       
-                        <label for="password" class="lbl-password">
+                        <FloatLabel variant="in" class="inline">
+                            <InputText id="password"  v-model="password" :invalid="!password"  variant="filled"  /> 
+                            <!-- @input="resetError"   -->
+                            <label class="lblPassword"  for="password" >Senha</label>
+                        </FloatLabel>
+                        <!-- <label for="password" class="lbl-password">
                             Senha
                         </label>
-                        <!-- input field -->
+                        input field
                         <div class="input-container">
                             <input 
                                 type="password"
@@ -39,7 +48,7 @@
                                 @input="resetError"
                                 class="login-input" 
                             />
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -181,6 +190,8 @@ import InputText from 'primevue/inputtext';
 
 import FloatLabel from 'primevue/floatlabel';
 import Button from 'primevue/button';
+
+import { Form } from '@primevue/forms';
 
 </script>
 <script>

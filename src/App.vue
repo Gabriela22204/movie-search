@@ -1,4 +1,6 @@
 <template>
+  <!-- teste -->
+   <!-- <MoviesList /> -->
   <div class="data" lang="pt-BR" dir="ltr">
     <!-- header -->
     <Header>
@@ -24,12 +26,13 @@
 <script>
 import LoginPage from './components/LoginPage.vue';
 import HeaderPage from './components/HeaderPage.vue';
+// import MoviesList from './components/MoviesList.vue';
 
 
 export default {
   name: 'App',
   components: {
-    LoginPage, HeaderPage,
+    LoginPage, HeaderPage, 
   },
    
 };
