@@ -6,21 +6,21 @@
                 <h1 class="default-login-title">Entrar</h1>
             </header>
             <!-- teste -->
-            <Form v-slot="$form" :initialValues="formInitialValues" :resolver="formResolver" :validateOnValueUpdate="false" :validateOnBlur="true" :validateOnMount="['firstName']" @submit="onFormSubmit" class="flex flex-col gap-4 w-full sm:w-56">
+            <Form v-slot="$form" :initialValues="formInitialValues" :resolver="formResolver" :validateOnValueUpdate="false" :validateOnBlur="true" :validateOnMount="['email']" @submit="onFormSubmit" class="flex flex-col gap-4 w-full sm:w-56">
                 <div class="flex flex-col gap-1">
-                    <InputText name="username" type="text" placeholder="Username" fluid />
-                    <Message v-if="$form.username?.invalid" severity="error" size="small" variant="simple">{{ $form.username.error.message }}</Message>
+                    <InputText name="email" type="email" placeholder="email" fluid />
+                    <Message v-if="$form.email?.invalid" severity="error" size="small" variant="simple">{{ $form.email.error.message }}</Message>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <InputText name="firstName" type="text" placeholder="First Name" fluid :formControl="{ validateOnValueUpdate: true }" />
-                    <Message v-if="$form.firstName?.invalid" severity="error" size="small" variant="simple">{{ $form.firstName.error.message }}</Message>
+                    <InputText name="password" type="password" placeholder="password" fluid :formControl="{ validateOnValueUpdate: true }" />
+                    <Message v-if="$form.password?.invalid" severity="error" size="small" variant="simple">{{ $form.password.error.message }}</Message>
                 </div>
                 <div class="flex flex-col gap-1">
                     <InputText name="lastName" type="text" placeholder="Last Name" fluid />
                     <Message v-if="$form.lastName?.invalid" severity="error" size="small" variant="simple">{{ $form.lastName.error.message }}</Message>
                 </div>
                 <Button type="submit" severity="secondary" label="Submit" />
-</Form>
+            </Form>
             <!-- form --> 
             <form class="form-Entrar" @submit.prevent="handleLogin">
                 <!-- input 1 -->
