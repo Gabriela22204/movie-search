@@ -13,14 +13,6 @@
     </div>
   
   </div> 
-<!-- teste de componente inlabel com floatlabel -->
-    <div>
-      <FloatLabel variant="in">
-        <InputText id="in_label" v-model="value1" autocomplete="off" />
-        <label for="in_label">{{ text }}</label>
-      </FloatLabel>
-    </div>
-<!-- até aqui -->
 </template>
 
 <!-- <script setup>

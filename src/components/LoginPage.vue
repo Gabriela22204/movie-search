@@ -11,25 +11,13 @@
                 <div class="element1">
                     <div class="login-container1">
                         <!-- put label inside of input field -->
-                        <AppFloatLabel variant="in">
-                            <InputText id="email" v-model="value2" variant="filled" />
-                            <label for="email">Email ou número de celular</label>
-                        </AppFloatLabel>
+                        <FloatLabel variant="in" class="inline">
+                            <InputText id="email"  v-model="value1" :invalid="!value1"  variant="filled"  /> 
+                            <!-- @input="resetError"   -->
+                            <label class="lblEmail"  for="email" >Email ou número de celular</label>
+                        </FloatLabel>
 
-                        <!-- <label for="email" class="lbl-email">
-                            Email ou número de celular
-                        </label> -->
-                        <!-- input field -->
-                        <div class="input-container">
-                            <InputText
-                                id="email"
-                                v-model="email"
-                                placeholder="Email ou número de telefone"
-                                @input="resetError"
-                                class="login-input"
-                                :class="{'p-invalid': error}"
-                            />
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -189,7 +177,9 @@
 
 //components
 <script setup>
+import InputText from 'primevue/inputtext';
 
+import FloatLabel from 'primevue/floatlabel';
 import Button from 'primevue/button';
 
 </script>
@@ -223,6 +213,10 @@ export default {
 
 
 <style scoped>
+.floatlbl {
+    color:#555;
+}
+
 .login-container {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
