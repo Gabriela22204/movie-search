@@ -63,13 +63,11 @@
                 
                 <p class="p1">OU</p>
 
-                <Button label="Usar um código de acesso" @click="handleLogin" class="login-toggle-button" type="button" />
-                <!-- <a> element 'Esqueceu a senha?' -->
+                <Button type="button"  label="Usar um código de acesso" @click="handleLogin" class="login-toggle-button"  />
+                
                 <a role="link" class="login-help-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
             </Form>
             
-        
-            <!-- form --> 
             
             <!-- footer -->
             <footer class="default-footer">
@@ -242,33 +240,7 @@ const onFormSubmit = handleSubmit((values) => {
 });
 
 </script>
-<script>
 
-export default {
-    name: 'LoginPage',
-    data() {
-        return {
-            email: '',
-            password: '',
-            checked: false,
-            error: '',
-        };
-    },
-    methods: {
-        handleLogin(){
-            if (this.email === 'user@example.com' && this.password === 'password123') {
-                alert('Login bem-sucedido');
-                // redirect to another page
-            } else {
-                this.error = 'Email ou senha incorretos.';
-            }
-        },
-        resetError() {
-            this.error = '';//reset error when user start typing
-        }
-    }
-};
-</script>
 
 
 <style scoped>
@@ -367,7 +339,7 @@ export default {
 }
 
 .login-toggle-button {
-    width: 100%;
+   
     padding: 14px;
     background-color: #363434;
     color: white;
