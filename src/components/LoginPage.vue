@@ -6,7 +6,23 @@
                 <h1 class="default-login-title">Entrar</h1>
             </header>
             <!-- teste -->
-            <Form v-slot="$form" :initialValues="formInitialValues" :resolver="formResolver" :validateOnValueUpdate="false" :validateOnBlur="true" :validateOnMount="['email']" @submit="onFormSubmit" class="flex flex-col gap-4 w-full sm:w-56">
+            <Form :resolver="formResolver" @submit="onFormSubmit" class="flex flex-col gap-4 w-full sm:w-56">
+                <FormField v-slot="$field" as="section" name="username" initialValue="" class="flex flex-col gap-2">
+                    <InputText name="email" type="email" placeholder="Email ou número de celular" fluid/>
+                    <Message v-if="$field?.invalid" severity="error" size="small" variant="simple">{{ $field.error?.message }}</Message>
+                </FormField>
+                
+                <FormField v-slot="$field" asChild name="password" initialValue="">
+                    <section class="flex flex-col gap-2">
+                        <Password type="text" placeholder="Password" :feedback="false" toggleMask fluid />
+                        <Message v-if="$field?.invalid" severity="error" size="small" variant="simple">{{ $field.error?.message }}</Message>
+                    </section>
+                </FormField>
+                <Button type="submit" severity="secondary" label="Submit" />
+            </Form>
+            
+            <!-- teste1 -->
+            <!-- <Form v-slot="$form" :initialValues="formInitialValues" :resolver="formResolver" :validateOnValueUpdate="false" :validateOnBlur="true" :validateOnMount="['email']" @submit="onFormSubmit" class="flex flex-col gap-4 w-full sm:w-56">
                 <div class="flex flex-col gap-1">
                     <InputText name="email" type="email" placeholder="email" fluid />
                     <Message v-if="$form.email?.invalid" severity="error" size="small" variant="simple">{{ $form.email.error.message }}</Message>
@@ -15,12 +31,8 @@
                     <InputText name="password" type="password" placeholder="password" fluid :formControl="{ validateOnValueUpdate: true }" />
                     <Message v-if="$form.password?.invalid" severity="error" size="small" variant="simple">{{ $form.password.error.message }}</Message>
                 </div>
-                <div class="flex flex-col gap-1">
-                    <InputText name="lastName" type="text" placeholder="Last Name" fluid />
-                    <Message v-if="$form.lastName?.invalid" severity="error" size="small" variant="simple">{{ $form.lastName.error.message }}</Message>
-                </div>
                 <Button type="submit" severity="secondary" label="Submit" />
-            </Form>
+            </Form> -->
             <!-- form --> 
             <form class="form-Entrar" @submit.prevent="handleLogin">
                 <!-- input 1 -->
@@ -30,11 +42,11 @@
 
                 <div class="element2">
                     <div class="login-container2">
-                        <FloatLabel variant="in" class="inline">
+                        <!-- <FloatLabel variant="in" class="inline">
                             <InputText id="password"  v-model="password" :invalid="!password"  variant="filled"  /> 
-                            <!-- @input="resetError"   -->
+                             @input="resetError"  
                             <label class="lblPassword"  for="password" >Senha</label>
-                        </FloatLabel>
+                        </FloatLabel>  -->
                         <!-- <label for="password" class="lbl-password">
                             Senha
                         </label>
@@ -188,10 +200,11 @@
 <script setup>
 import InputText from 'primevue/inputtext';
 
-import FloatLabel from 'primevue/floatlabel';
+import Password from 'primevue/password';
 import Button from 'primevue/button';
 
 import { Form } from '@primevue/forms';
+import { FormField } from '@primevue/forms';
 
 </script>
 <script>
