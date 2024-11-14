@@ -79,14 +79,15 @@
                 <div class="a">
                     <div class="remember-me-field-container">
                         <div class="control-wrapper">
-                            <!-- checkbox remember me -->
-                            <input type="checkbox" id="checkbox" name="rememberMe" v-model="checked">
+                            <label for="checkbox" class="default-label">
+                            {{ checked }}
+                            </label>
+                            <Checkbox inputId="checkbox" name="rememberMe" v-model="checked" binary variant="filled" />
+                            
                         </div>
 
-                        <!-- label remember me -->
-                         <label for="checkbox" class="default-label">
-                            {{ checked }}
-                         </label>
+
+                         
                     </div>
                 </div>
 
@@ -207,6 +208,7 @@ import InputText from 'primevue/inputtext';
 import Password from 'primevue/password';
 import Message from 'primevue/message';
 import Button from 'primevue/button';
+import Checkbox from 'primevue/checkbox';
 
 const formInitialValues = {
   email: '',
@@ -309,6 +311,9 @@ const onFormSubmit = handleSubmit((values) => {
 
 .login-submit-button:hover {
   background-color: #c60b14;
+}
+.login-toggle-button:hover {
+    background-color: #2b2727;
 }
 
 .forgot-password-container {
