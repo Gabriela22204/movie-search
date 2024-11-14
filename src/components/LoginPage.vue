@@ -1,12 +1,14 @@
 <template>
     <div class="default">
         <div class="login-page-container">
+            <div class="login-box">
             <!-- header -->
             <header class="header-title">
                 <h1 class="default-login-title">Entrar</h1>
             </header>
             <!-- teste -->
-            <Form 
+             
+                <Form 
             v-slot="{ handleSubmit, errors }" 
             :initialValues="formInitialValues" 
             :resolver="formResolver" 
@@ -18,6 +20,7 @@
             >
                 <div class="flex flex-col gap-1">
                     <InputText 
+                    class="login-input"
                     name="email" 
                     type="email" 
                     placeholder="Email ou número de celular" 
@@ -38,12 +41,13 @@
 
                 <div class="flex flex-col gap-1">
                     <Password 
+                    class="login-password"
                     name="password" 
                     type="text" 
                     placeholder="Senha" 
                     :feedback="false" 
                     toggleMask 
-                    fluid  
+                      
                     :class="{'p-invalid': errors.password}"
                     />
 
@@ -58,7 +62,7 @@
                 </div>
                 
 
-                <Button type="submit" severity="secondary" label="Entrar" />
+                <Button type="submit" class="login-submit-button" severity="secondary" label="Entrar" />
 
                 
                 <p class="p1">OU</p>
@@ -67,6 +71,8 @@
                 
                 <a role="link" class="login-help-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
             </Form>
+             
+            
             
             
             <!-- footer -->
@@ -117,6 +123,8 @@
                  </div>
             </footer>
         </div>
+        </div>
+        
     </div>
 <!-- footer login page -->
     <footer class="default-footer">
@@ -254,20 +262,19 @@ const onFormSubmit = handleSubmit((values) => {
     font-style: normal;
 }  
 
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  
-  
+
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65); /* Fundo escuro com opacidade */
 }
 
 .login-box {
-  width: 350px;
+  width: 450px;
   padding: 40px;
-  background-color: #000000;
-  opacity: none;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   text-align: center;
   color: white;
@@ -289,6 +296,14 @@ const onFormSubmit = handleSubmit((values) => {
   background-color: #222;
   color: white;
   font-size: 16px;
+}
+.login-password {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    
 }
 
 .login-submit-button {
