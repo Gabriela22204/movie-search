@@ -251,15 +251,6 @@ const onFormSubmit = handleSubmit((values) => {
 
 
 <style scoped>
-
-
-.login-container {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}  
-
-
 .login-page-container {
     display: flex;
     justify-content: center;
@@ -284,7 +275,7 @@ const onFormSubmit = handleSubmit((values) => {
   display: flex;
 }
 
-.login-input {
+.login-input, .login-password {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -293,14 +284,6 @@ const onFormSubmit = handleSubmit((values) => {
   background-color: #222;
   color: white;
   font-size: 16px;
-}
-.login-password {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #555;
-    border-radius: 4px;
-    background-color: #222;
-    
 }
 
 .login-submit-button {
@@ -324,7 +307,7 @@ const onFormSubmit = handleSubmit((values) => {
     border-radius: 4px;
 }
 
-.login-button:hover {
+.login-submit-button:hover {
   background-color: #c60b14;
 }
 
@@ -360,22 +343,6 @@ const onFormSubmit = handleSubmit((values) => {
     border-color:white;
 }
 
-.login-toggle-button {
-   
-    padding: 14px;
-    background-color: #363434;
-    color: white;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 4px;
-    align-content: center;
-    
-}
-
-.login-toggle-button:hover {
-  background-color: #272626;
-}
 
 .error-message {
   color: red;
@@ -387,15 +354,6 @@ const onFormSubmit = handleSubmit((values) => {
     display: flex;
     width: 100%;
     padding: 0 14 14 0;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.sub-container {
-    display: flex;
-    width: 100%;
-    padding: 14px;
-    margin: 10px 0 10px;
     align-items: center;
     justify-content: space-between;
 }
