@@ -6,7 +6,16 @@
                 <h1 class="default-login-title">Entrar</h1>
             </header>
             <!-- teste -->
-            <Form v-slot="$form" :initialValues="formInitialValues" :resolver="formResolver" :validateOnValueUpdate="false" :validateOnBlur="true"  :validateOnMount="['email']"   @submit="onFormSubmit" class="flex flex-col gap-4 w-full">
+            <Form 
+            v-slot="{ handleSubmit, errors }" 
+            :initialValues="formInitialValues" 
+            :resolver="formResolver" 
+            :validateOnValueUpdate="false" 
+            :validateOnBlur="true"  
+            :validateOnMount="['email']"   
+            @submit="handleSubmit(onFormSubmit)" 
+            class="flex flex-col gap-4 w-full"
+            >
                 <div class="flex flex-col gap-1">
                     <InputText 
                     name="email" 
@@ -14,71 +23,54 @@
                     placeholder="Email ou número de celular" 
                     fluid 
                     style="width: 26.5%" 
-                    :formControl="{ validateOnValueUpdate: true }"/> <!-- added fluid style correct here after modificate with css -->
-                    <Message v-if="$form.email?.invalid" severity="error" size="small" variant="simple">{{ $form.email.error.message }}</Message>
+                    :class="{'p-invalid': errors.email}"
+                    />
+
+                    <Message 
+                    v-if="errors.email"
+                    severity="error" 
+                    size="small" 
+                    variant="simple"
+                    >
+                    {{ errors.email  }}
+                    </Message>
                 </div>
+
                 <div class="flex flex-col gap-1">
-                    <Password name="password" type="text" placeholder="Senha" :feedback="false" toggleMask fluid  :formControl="{ validateOnValueUpdate: true }"/>
-                    <Message v-if="$form.password?.invalid" severity="error" size="small" variant="simple">{{ $form.password.error.message }}</Message>
+                    <Password 
+                    name="password" 
+                    type="text" 
+                    placeholder="Senha" 
+                    :feedback="false" 
+                    toggleMask 
+                    fluid  
+                    :class="{'p-invalid': errors.password}"
+                    />
+
+                    <Message 
+                    v-if="errors.password" 
+                    severity="error" 
+                    size="small" 
+                    variant="simple"
+                    >
+                    {{ errors.password }}
+                    </Message>
                 </div>
                 
 
                 <Button type="submit" severity="secondary" label="Entrar" />
-            </Form>
-            
-            <!-- teste1 -->
-            <!-- <Form v-slot="$form" :initialValues="formInitialValues" :resolver="formResolver" :validateOnValueUpdate="false" :validateOnBlur="true" :validateOnMount="['email']" @submit="onFormSubmit" class="flex flex-col gap-4 w-full sm:w-56">
-                <div class="flex flex-col gap-1">
-                    <InputText name="email" type="email" placeholder="email" fluid />
-                    <Message v-if="$form.email?.invalid" severity="error" size="small" variant="simple">{{ $form.email.error.message }}</Message>
-                </div>
-                <div class="flex flex-col gap-1">
-                    <InputText name="password" type="password" placeholder="password" fluid :formControl="{ validateOnValueUpdate: true }" />
-                    <Message v-if="$form.password?.invalid" severity="error" size="small" variant="simple">{{ $form.password.error.message }}</Message>
-                </div>
-                <Button type="submit" severity="secondary" label="Submit" />
-            </Form> -->
-            <!-- form --> 
-            <form class="form-Entrar" @submit.prevent="handleLogin">
-                <!-- input 1 -->
-            
 
-                <!-- input 2 -->
-
-                <div class="element2">
-                    <div class="login-container2">
-                        <!-- <FloatLabel variant="in" class="inline">
-                            <InputText id="password"  v-model="password" :invalid="!password"  variant="filled"  /> 
-                             @input="resetError"  
-                            <label class="lblPassword"  for="password" >Senha</label>
-                        </FloatLabel>  -->
-                        <!-- <label for="password" class="lbl-password">
-                            Senha
-                        </label>
-                        input field
-                        <div class="input-container">
-                            <input 
-                                type="password"
-                                value="password" 
-                                v-model="password" 
-                                placeholder="Senha" 
-                                @input="resetError"
-                                class="login-input" 
-                            />
-                        </div> -->
-                    </div>
-                </div>
-
-                <!-- button Entrar-->
-                <Button label="Entrar" @click="handleLogin" class="login-submit-button" type="submit" />
-                <!-- <button role="button" @click="handleLogin" class="login-submit-button" type="submit">Entrar</button> --> 
-                <!-- p1 element -->
+                
                 <p class="p1">OU</p>
-                <!-- button Usar código de acesso -->
+
                 <Button label="Usar um código de acesso" @click="handleLogin" class="login-toggle-button" type="button" />
                 <!-- <a> element 'Esqueceu a senha?' -->
                 <a role="link" class="login-help-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
-            </form>
+            </Form>
+            
+        
+            <!-- form --> 
+            
             <!-- footer -->
             <footer class="default-footer">
                 <div class="a">
@@ -203,13 +195,51 @@
 
 //components
 <script setup>
-import InputText from 'primevue/inputtext';
 
+import {Form, useForm } from 'vee-validate';
+import * as yup from 'yup';
+import InputText from 'primevue/inputtext';
 import Password from 'primevue/password';
+import Message from 'primevue/message';
 import Button from 'primevue/button';
 
-import { Form } from '@primevue/forms';
+const formInitialValues = {
+  email: '',
+  password: ''
+};
 
+// Resolver de validação com 'vee-validate'
+const formResolver = async (values) => {
+  try {
+    await validationSchema.validate(values, { abortEarly: false });
+    return { values, errors: {} };
+  } catch (err) {
+    const errors = err.inner.reduce((acc, e) => {
+      acc[e.path] = e.message;
+      return acc;
+    }, {});
+    return { values, errors };
+  }
+};
+
+const validationSchema = yup.object({
+  email: yup
+    .string()
+    .email('Informe um email ou número de telefone válido.')
+    .required('Este campo é obrigatório.'),
+  password: yup
+    .string()
+    .required('A senha é obrigatória.')
+});
+
+const { handleSubmit } = useForm({
+  validationSchema
+});
+
+const onFormSubmit = handleSubmit((values) => {
+  alert('Formulário enviado com sucesso!');
+  console.log(values); // Aqui você pode fazer o que precisar com os dados do formulário
+});
 
 </script>
 <script>
