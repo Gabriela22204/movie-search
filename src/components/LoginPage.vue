@@ -8,11 +8,11 @@
             <!-- teste -->
             <Form v-slot="$form" :initialValues="formInitialValues" :resolver="formResolver" :validateOnValueUpdate="false" :validateOnBlur="true"  :validateOnMount="['email']"   @submit="onFormSubmit" class="flex flex-col gap-4 w-full">
                 <div class="flex flex-col gap-1">
-                    <InputText name="email" type="email" placeholder="Email ou número de celular" fluid style="width: 26.5%" :formControl="{ validateOnBlur: true }"/> <!-- added fluid style correct here after modificate with css -->
+                    <InputText name="email" type="email" placeholder="Email ou número de celular" fluid style="width: 26.5%" :formControl="{ validateOnValueUpdate: true }"/> <!-- added fluid style correct here after modificate with css -->
                     <Message v-if="$form.email?.invalid" severity="error" size="small" variant="simple">{{ $form.email.error.message }}</Message>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <Password name="password" type="text" placeholder="Senha" :feedback="false" toggleMask fluid  :formControl="{ validateOnBlur: true }"/>
+                    <Password name="password" type="text" placeholder="Senha" :feedback="false" toggleMask fluid  :formControl="{ validateOnValueUpdate: true }"/>
                     <Message v-if="$form.password?.invalid" severity="error" size="small" variant="simple">{{ $form.password.error.message }}</Message>
                 </div>
                 
