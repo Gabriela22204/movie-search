@@ -24,8 +24,7 @@
                     name="email" 
                     type="email" 
                     placeholder="Email ou número de celular" 
-                    fluid 
-                    style="width: 26.5%" 
+                    fluid
                     :class="{'p-invalid': errors.email}"
                     />
 
@@ -47,7 +46,7 @@
                     placeholder="Senha" 
                     :feedback="false" 
                     toggleMask 
-                      
+                    
                     :class="{'p-invalid': errors.password}"
                     />
 
@@ -252,9 +251,7 @@ const onFormSubmit = handleSubmit((values) => {
 
 
 <style scoped>
-.floatlbl {
-    color:#555;
-}
+
 
 .login-container {
     font-family: 'Roboto', sans-serif;
