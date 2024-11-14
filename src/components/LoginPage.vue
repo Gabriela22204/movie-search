@@ -316,6 +316,16 @@ const onFormSubmit = handleSubmit((values) => {
   cursor: pointer;
   border-radius: 4px;
 }
+.login-toggle-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #363434;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
 .login-button:hover {
   background-color: #c60b14;
