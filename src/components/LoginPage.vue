@@ -80,7 +80,7 @@
                     <div class="remember-me-field-container">
                         <div class="control-wrapper">
                             <label for="checkbox" class="default-label">
-                            {{ checked }}
+                            {{ checked }}Lembre-se de mim
                             </label>
                             <Checkbox inputId="checkbox" name="rememberMe" v-model="checked" binary variant="filled" />
                             
