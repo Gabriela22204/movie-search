@@ -287,25 +287,22 @@ const onFormSubmit = handleSubmit((values) => {
   outline: none;
 }
 
-.login-submit-button {
+.login-submit-button, .login-toggle-button {
   width: 100%;
   padding: 14px;
-  background-color: #e50914;
   color: white;
   border: none;
   font-size: 18px;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.login-submit-button{
+    background-color: #e50914;
 }
 .login-toggle-button {
-    width: 100%;
-    padding: 14px;
     background-color: #363434;
-    color: white;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 4px;
 }
 
 .login-submit-button:hover {
