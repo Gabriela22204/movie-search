@@ -317,17 +317,19 @@ const onFormSubmit = handleSubmit((values) => {
     padding: 14px;
     text-align: center;
     margin: 10px -10px 10px;
-    
 }
 
-.login-help-link, .default-label, .login-sign-up-now, ._self {
+.login-help-link, .default-label, .login-sign-up-now a,  .login-toggle-button{
     color:white;
     text-decoration: none;
     font-size: 18px;
 }
 
-.login-help-link:hover , ._self:hover {
+.login-help-link:hover , .login-sign-up-now a:hover {
     text-decoration: underline;
+}
+
+.login-help-link:hover {
     color:rgb(163, 156, 156);
 }
 
