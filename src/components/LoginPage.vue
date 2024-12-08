@@ -95,26 +95,27 @@
 
                 <!-- sign up now -->
                 <p class="login-sign-up-now">
-                    "Novo por aqui?"
+                    Novo por aqui?
                     <a class target="_self" href="/">Assine agora</a>
                     
                 </p>
                 <!-- reCAPTCHA -->
                  <div class="recaptcha-terms-of-use">
-                    <p>
+                    <p class="recaptcha-text">
                         <span>
-                            "Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô."
+                            Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.
+                            <button class="recaptcha-terms-of-use-link-button">
+                                Saiba mais.
+                            </button>
                         </span>
-                        <button class="recaptcha-terms-of-use-link-button">
-                            Saiba mais.
-                        </button>
+                        
                     </p>
                 </div>
 
                 <!-- recaptcha terms of use text -->
                 <div class="recaptcha-terms-of-use--disclousure">
                         <span id="recaptcha-disclousure-text">
-                            "As informações recolhidas pelo Google reCAPTCHA estão sujeitas à "
+                            As informações recolhidas pelo Google reCAPTCHA estão sujeitas à
                             <a href="https://policies.google.com/privacy" id="recaptcha-privacy-link" target="_blank">Política de Privacidade</a>
                             " e "
                             <a href="https://policies.google.com/terms" id="recaptcha-tos-link">Termos de Uso</a>
@@ -379,6 +380,12 @@ const onFormSubmit = handleSubmit((values) => {
     width: 100%;
 }
 
+.login-sign-up-now{
+    color: rgb(146, 146, 146);
+    display: flex;
+    align-content: space-between;
+}
+
 .login-help-link, .default-label, .login-sign-up-now a,  .login-toggle-button{
     color:white;
     text-decoration: none;
@@ -392,10 +399,10 @@ const onFormSubmit = handleSubmit((values) => {
 .login-help-link:hover, .p-checkbox-input:hover {
     color:rgb(163, 156, 156);
 }
-
-.p-checkbox-box {
-    border: 2px solid #555;
-    background-color: #333;
+.p-checkbox {
+    display:flex;
+    width: 8%;
+    
 }
 .p-checkbox-input {
     border: 2px solid #555;
@@ -421,10 +428,18 @@ const onFormSubmit = handleSubmit((values) => {
     justify-content: space-between;
 }
 
+.remember-me-field-container {
+    display: flex;
+}
+
 .control-wrapper{
     display:flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
+}
+
+.recaptcha-text{
+    display: flex;
 }
 </style>
