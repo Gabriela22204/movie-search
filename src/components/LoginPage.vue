@@ -82,8 +82,12 @@
                 <div class="a">
                     <div class="remember-me-field-container">
                         <div class="control-wrapper">
-                            <p class="default-label">Lembre-se de mim</p>
-                            <Checkbox v-model="checked" binary/>
+
+                            <Checkbox id="checkbox" class="checkbox-element" name="rememberMe" v-model="checked" binary/>
+                            <label for="checkbox" class="default-label">
+                            {{ checked }}Lembre-se de mim
+                            </label>
+                            
                             
                         </div>  
                     </div>
@@ -208,7 +212,8 @@ import Checkbox from 'primevue/checkbox';
 
 const formInitialValues = {
   email: '',
-  password: ''
+  password: '',
+  checked:false,
 };
 
 // Validation schema with veevalidate
