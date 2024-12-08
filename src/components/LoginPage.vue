@@ -249,6 +249,7 @@ const onFormSubmit = handleSubmit((values) => {
 
 
 <style scoped>
+
 .login-page-container {
     display: flex;
     justify-content: center;
@@ -259,7 +260,7 @@ const onFormSubmit = handleSubmit((values) => {
 
 .login-box {
   width: 450px;
-  padding: 40px;
+  padding: 70px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   text-align: center;

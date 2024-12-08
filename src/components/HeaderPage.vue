@@ -21,9 +21,11 @@ export default {
 
 <style scoped>
 .header-container {
+  padding: 0px 20px 0 20px;
   display: flex;
   align-items: left;
   background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.65); 
 }
 
 .logo {
