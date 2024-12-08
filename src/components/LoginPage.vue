@@ -92,19 +92,17 @@
                 <p class="login-sign-up-now">
                     "Novo por aqui?"
                     <a class target="_self" href="/">Assine agora</a>
-                    "."
+                    
                 </p>
-                <!-- reCAPTCHA element -->
+                <!-- reCAPTCHA -->
                  <div class="recaptcha-terms-of-use">
                     <p>
                         <span>
                             "Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô."
                         </span>
-                        "&nbsp;"
-                        <!-- button see more -->
-                         <button class="recaptcha-terms-of-use-link-button">
+                        <button class="recaptcha-terms-of-use-link-button">
                             Saiba mais.
-                         </button>
+                        </button>
                     </p>
 
                     <!-- recaptcha terms of use text -->
