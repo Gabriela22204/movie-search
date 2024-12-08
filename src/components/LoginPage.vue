@@ -8,7 +8,7 @@
             </header>
             <!-- teste -->
              
-                <Form 
+            <Form 
             v-slot="{ handleSubmit, errors }" 
             :initialValues="formInitialValues" 
             :resolver="formResolver" 
@@ -16,7 +16,7 @@
             :validateOnBlur="true"  
             :validateOnMount="['email']"   
             @submit="handleSubmit(onFormSubmit)" 
-            class="flex flex-col gap-4 w-full"
+            class="flex flex-col gap-4 w-full sm:w-64"
             >
                 <div class="flex flex-col gap-1">
                     <InputText 
@@ -40,13 +40,14 @@
 
                 <div class="flex flex-col gap-1">
                     <Password 
+                    v-model="password"
                     class="login-password"
-                    name="password" 
-                    type="password" 
+                    name="password"
                     placeholder="Senha" 
                     :feedback="false" 
                     toggleMask 
-                    
+                    fluid
+                    aria-label="Password"
                     :class="{'p-invalid': errors.password}"
                     />
 
