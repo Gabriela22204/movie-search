@@ -210,7 +210,7 @@ const formInitialValues = {
   password: ''
 };
 
-// Resolver de validação com 'vee-validate'
+// Validation schema with veevalidate
 const formResolver = async (values) => {
   try {
     await validationSchema.validate(values, { abortEarly: false });
@@ -240,7 +240,7 @@ const { handleSubmit } = useForm({
 
 const onFormSubmit = handleSubmit((values) => {
   alert('Formulário enviado com sucesso!');
-  console.log(values); // Aqui você pode fazer o que precisar com os dados do formulário
+  console.log(values); // process form values
 });
 
 </script>
@@ -253,7 +253,7 @@ const onFormSubmit = handleSubmit((values) => {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.65); /* Fundo escuro com opacidade */
+    background-color: rgba(0, 0, 0, 0.65); 
 }
 
 .login-box {
