@@ -38,7 +38,7 @@
                     </Message>
                 </div>
 
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col gap-1 container-password">
                     <Password 
                     v-model="password"
                     class="login-password"
@@ -271,7 +271,7 @@ const onFormSubmit = handleSubmit((values) => {
     margin-bottom: 20px;
 }
 
-.login-input, .login-password {
+.login-input{
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -283,16 +283,19 @@ const onFormSubmit = handleSubmit((values) => {
   transition: border-color 0.3s ease;
 }
 
+.container-password{
+    padding: 14px;
+}
+
 .login-password .p-password {
     display: flex;
-    align-items: center;
     position: relative;
     width: 100%;
 }
 
 .login-password input {
     width: 100%;
-    padding: 12px;
+    padding: 10px 0;
     background-color: #222;
     color: white;
     border: 1px solid #555;
@@ -322,15 +325,6 @@ const onFormSubmit = handleSubmit((values) => {
 
 .login-password .p-password-icon:focus {
     outline: none;
-}
-
-.login-password .p-password-icon:hover {
-    color: #e50914;
-}
-
-.login-input:focus, .login-password:focus {
-  border-color: #e50914;
-  outline: none;
 }
 
 .login-submit-button, .login-toggle-button {
