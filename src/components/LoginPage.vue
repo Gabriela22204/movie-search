@@ -293,6 +293,11 @@ const onFormSubmit = handleSubmit((values) => {
     width: 100%;
 }
 
+.p-component{
+    width:100%;
+    position:relative;
+}
+
 .login-password input {
     width: 100%;
     padding: 10px 0;
