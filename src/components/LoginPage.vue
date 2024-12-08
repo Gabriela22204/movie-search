@@ -83,7 +83,7 @@
                     <div class="remember-me-field-container">
                         <div class="control-wrapper">
 
-                            <Checkbox id="checkbox" class="checkbox-element" name="rememberMe" v-model="checked" binary/>
+                            <Checkbox id="checkbox" v-model="checked" binary/>
                             <label for="checkbox" class="default-label">
                             {{ checked }}Lembre-se de mim
                             </label>
@@ -385,18 +385,18 @@ const onFormSubmit = handleSubmit((values) => {
     text-decoration: underline;
 }
 
-.login-help-link:hover, #checkbox:hover {
+.login-help-link:hover, .p-checkbox-input:hover {
     color:rgb(163, 156, 156);
 }
 
-#checkbox {
+.p-checkbox-input {
     padding: 10px;
     width: 20px;
     border: 2px solid #555;
     background-color: #333;
 }
 
-#checkbox:hover {
+.p-checkbox-input:hover {
     cursor: pointer;
     border-color: #333333;
 }
@@ -413,5 +413,10 @@ const onFormSubmit = handleSubmit((values) => {
     padding: 0 14 14 0;
     align-items: center;
     justify-content: space-between;
+}
+
+.control-wrapper{
+    display:flex;
+    align-items: center;
 }
 </style>
