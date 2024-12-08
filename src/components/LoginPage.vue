@@ -21,7 +21,7 @@
                 <div class="flex flex-col gap-1">
                     <InputText 
                     class="login-input"
-                    name="email" 
+                    name="email"  
                     type="email" 
                     placeholder="Email ou número de celular" 
                     fluid
@@ -42,7 +42,7 @@
                     <Password 
                     class="login-password"
                     name="password" 
-                    type="text" 
+                    type="password" 
                     placeholder="Senha" 
                     :feedback="false" 
                     toggleMask 
@@ -68,7 +68,7 @@
 
                 <Button type="button"  label="Usar um código de acesso" @click="handleLogin" class="login-toggle-button"  />
                 
-                <a role="link" class="login-help-link" href="https:www.netflix.com/LoginHelp">Esqueceu a senha?</a>
+                <a role="link" class="login-help-link" href="https://www.netflix.com/LoginHelp">Esqueceu a senha?</a>
             </Form>
              
             
