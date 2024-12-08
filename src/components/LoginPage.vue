@@ -284,10 +284,10 @@ const onFormSubmit = handleSubmit((values) => {
 }
 
 .container-password{
-    padding: 14px;
+    padding: 14px 0 14px;
 }
 
-.login-password .p-password {
+.p-password {
     display: flex;
     position: relative;
     width: 100%;
