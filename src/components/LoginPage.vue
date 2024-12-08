@@ -265,11 +265,9 @@ const onFormSubmit = handleSubmit((values) => {
   color: white;
 }
 
-.login-title {
-  font-size: 28px;
-  margin-left: 3px;
-  margin-bottom: 20px;
-  display: flex;
+.default-login-title {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .login-input, .login-password {
@@ -281,6 +279,7 @@ const onFormSubmit = handleSubmit((values) => {
   background-color: #222;
   color: white;
   font-size: 16px;
+  transition: border-color 0.3s ease;
 }
 
 .login-submit-button {
