@@ -74,7 +74,7 @@
             
             
             
-            <!-- footer -->
+        <!-- main box footer -->
             <footer class="default-footer">
                 <div class="a">
                     <div class="remember-me-field-container">
