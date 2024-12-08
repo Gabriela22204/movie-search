@@ -84,14 +84,11 @@
                             </label>
                             <Checkbox inputId="checkbox" name="rememberMe" v-model="checked" binary variant="filled" />
                             
-                        </div>
-
-
-                         
+                        </div>  
                     </div>
                 </div>
 
-                <!-- login sign up now -->
+                <!-- sign up now -->
                 <p class="login-sign-up-now">
                     "Novo por aqui?"
                     <a class target="_self" href="/">Assine agora</a>
