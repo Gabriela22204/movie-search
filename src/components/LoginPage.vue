@@ -282,6 +282,51 @@ const onFormSubmit = handleSubmit((values) => {
   transition: border-color 0.3s ease;
 }
 
+.login-password .p-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.login-password input {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+.login-password .p-password-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.login-password:focus-within {
+    border-color: #e50914;
+    outline: none;
+}
+
+.login-password .p-password .p-inputtext {
+    background-color: #222;
+    border-radius: 4px;
+}
+
+.login-password .p-password-icon:focus {
+    outline: none;
+}
+
+.login-password .p-password-icon:hover {
+    color: #e50914;
+}
+
 .login-input:focus, .login-password:focus {
   border-color: #e50914;
   outline: none;
