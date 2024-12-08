@@ -104,9 +104,10 @@
                             Saiba mais.
                         </button>
                     </p>
+                </div>
 
-                    <!-- recaptcha terms of use text -->
-                    <div class="recaptcha-terms-of-use--disclousure">
+                <!-- recaptcha terms of use text -->
+                <div class="recaptcha-terms-of-use--disclousure">
                         <span id="recaptcha-disclousure-text">
                             "As informações recolhidas pelo Google reCAPTCHA estão sujeitas à "
                             <a href="https://policies.google.com/privacy" id="recaptcha-privacy-link" target="_blank">Política de Privacidade</a>
@@ -115,12 +116,11 @@
                             ", e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google)."
                         </span>
                     </div>
-                 </div>
             </footer>
         </div>
-        </div>
-        
     </div>
+</div>
+
 <!-- footer login page -->
     <footer class="default-footer">
         <footer class="default-footer2">
