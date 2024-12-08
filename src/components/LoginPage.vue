@@ -375,6 +375,10 @@ const onFormSubmit = handleSubmit((values) => {
     padding: 14px;
 }
 
+.default-label{
+    width: 100%;
+}
+
 .login-help-link, .default-label, .login-sign-up-now a,  .login-toggle-button{
     color:white;
     text-decoration: none;
@@ -389,9 +393,11 @@ const onFormSubmit = handleSubmit((values) => {
     color:rgb(163, 156, 156);
 }
 
+.p-checkbox-box {
+    border: 2px solid #555;
+    background-color: #333;
+}
 .p-checkbox-input {
-    padding: 10px;
-    width: 20px;
     border: 2px solid #555;
     background-color: #333;
 }
@@ -418,5 +424,7 @@ const onFormSubmit = handleSubmit((values) => {
 .control-wrapper{
     display:flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 </style>
