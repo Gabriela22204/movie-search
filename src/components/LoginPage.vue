@@ -267,8 +267,9 @@ const onFormSubmit = handleSubmit((values) => {
 }
 
 .default-login-title {
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .login-input{
