@@ -82,10 +82,8 @@
                 <div class="a">
                     <div class="remember-me-field-container">
                         <div class="control-wrapper">
-                            <label for="checkbox" class="default-label">
-                            {{ checked }}Lembre-se de mim
-                            </label>
-                            <Checkbox inputId="checkbox" name="rememberMe" v-model="checked" binary variant="filled" />
+                            <p class="default-label">Lembre-se de mim</p>
+                            <Checkbox v-model="checked" binary/>
                             
                         </div>  
                     </div>
@@ -395,7 +393,7 @@ const onFormSubmit = handleSubmit((values) => {
 
 #checkbox:hover {
     cursor: pointer;
-    border-color: #e50914;
+    border-color: #333333;
 }
 
 .error-message {
