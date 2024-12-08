@@ -329,23 +329,21 @@ const onFormSubmit = handleSubmit((values) => {
     text-decoration: underline;
 }
 
-.login-help-link:hover {
+.login-help-link:hover, #checkbox:hover {
     color:rgb(163, 156, 156);
 }
 
 #checkbox {
-    padding: 14px;
-    width: 100%;
-    border-color:#1b1b1b;
-    border: 2px;
-    
+    padding: 10px;
+    width: 20px;
+    border: 2px solid #555;
+    background-color: #333;
 }
 
 #checkbox:hover {
     cursor: pointer;
-    border-color:white;
+    border-color: #e50914;
 }
-
 
 .error-message {
   color: red;
