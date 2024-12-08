@@ -261,7 +261,7 @@ const onFormSubmit = handleSubmit((values) => {
 .login-box {
   width: 450px;
   padding: 70px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.60);
   border-radius: 10px;
   text-align: center;
   color: white;
