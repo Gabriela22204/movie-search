@@ -282,6 +282,11 @@ const onFormSubmit = handleSubmit((values) => {
   transition: border-color 0.3s ease;
 }
 
+.login-input:focus, .login-password:focus {
+  border-color: #e50914;
+  outline: none;
+}
+
 .login-submit-button {
   width: 100%;
   padding: 14px;
