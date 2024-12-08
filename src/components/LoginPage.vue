@@ -68,8 +68,10 @@
                 <p class="p1">OU</p>
 
                 <Button type="button"  label="Usar um código de acesso" @click="handleLogin" class="login-toggle-button"  />
+                <div class="login-help-link-container">
+                    <a role="link" class="login-help-link" href="https://www.netflix.com/LoginHelp">Esqueceu a senha?</a>
+                </div>
                 
-                <a role="link" class="login-help-link" href="https://www.netflix.com/LoginHelp">Esqueceu a senha?</a>
             </Form>
              
             
@@ -364,6 +366,10 @@ const onFormSubmit = handleSubmit((values) => {
     padding: 14px;
     text-align: center;
     margin: 10px -10px 10px;
+}
+
+.login-help-link-container{
+    padding: 14px;
 }
 
 .login-help-link, .default-label, .login-sign-up-now a,  .login-toggle-button{
